@@ -1,0 +1,209 @@
+/* Basic Reset and Global Styles */
+:root {
+    --dark-bg: #1e1e2f;
+    --main-text: #f0f0f0;
+    --secondary-text: #a0a0a0;
+    --accent-color: #7a3ed1; /* A purple/blue accent */
+    --card-bg: #2a2a3e;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--main-text);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+/* --- Navigation Bar Styling --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: rgba(30, 30, 47, 0.9); /* Slightly transparent background for the header */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--card-bg);
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.navbar a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--main-text);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- Main Layout --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 5%;
+}
+
+/* --- Intro Section --- */
+.intro-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    /* Add a subtle glow/gradient effect here to match the image */
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+.profile-text {
+    text-align: left;
+}
+
+.profile-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.caption {
+    font-size: 1.2em;
+    color: var(--secondary-text);
+}
+
+/* --- Section Headings --- */
+section h2 {
+    font-size: 2em;
+    border-bottom: 2px solid var(--card-bg);
+    padding-bottom: 10px;
+    margin: 40px 0 30px;
+    color: var(--main-text);
+}
+
+/* --- Skills Section --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-item {
+    text-align: center;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-item .icon-placeholder {
+    font-size: 3em;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg);
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.skill-item:hover .icon-placeholder {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+.skill-item p {
+    font-size: 0.9em;
+    color: var(--secondary-text);
+}
+
+/* --- Projects Section --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--accent-color);
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 150px;
+    background: #444; /* Placeholder visual */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    margin-bottom: 5px;
+    color: var(--main-text);
+}
+
+.project-card p {
+    font-size: 0.9em;
+    color: var(--secondary-text);
+    margin-bottom: 15px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--accent-color);
+    color: var(--main-text);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+}
+
+.project-button:hover {
+    background-color: #5d2e9e; /* Darker accent on hover */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 1px solid var(--card-bg);
+    color: var(--secondary-text);
+    font-size: 0.9em;
+}
